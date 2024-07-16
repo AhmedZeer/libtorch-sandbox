@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named example-app
+# Target rules for targets named Tensors
 
 # Build rule for target.
-example-app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example-app
-.PHONY : example-app
+Tensors: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tensors
+.PHONY : Tensors
 
 # fast build rule for target.
-example-app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example-app.dir/build.make CMakeFiles/example-app.dir/build
-.PHONY : example-app/fast
+Tensors/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tensors.dir/build.make CMakeFiles/Tensors.dir/build
+.PHONY : Tensors/fast
 
-example-app.o: example-app.cpp.o
-.PHONY : example-app.o
+Tensors.o: Tensors.cpp.o
+.PHONY : Tensors.o
 
 # target to build an object file
-example-app.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example-app.dir/build.make CMakeFiles/example-app.dir/example-app.cpp.o
-.PHONY : example-app.cpp.o
+Tensors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tensors.dir/build.make CMakeFiles/Tensors.dir/Tensors.cpp.o
+.PHONY : Tensors.cpp.o
 
-example-app.i: example-app.cpp.i
-.PHONY : example-app.i
+Tensors.i: Tensors.cpp.i
+.PHONY : Tensors.i
 
 # target to preprocess a source file
-example-app.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example-app.dir/build.make CMakeFiles/example-app.dir/example-app.cpp.i
-.PHONY : example-app.cpp.i
+Tensors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tensors.dir/build.make CMakeFiles/Tensors.dir/Tensors.cpp.i
+.PHONY : Tensors.cpp.i
 
-example-app.s: example-app.cpp.s
-.PHONY : example-app.s
+Tensors.s: Tensors.cpp.s
+.PHONY : Tensors.s
 
 # target to generate assembly for a file
-example-app.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/example-app.dir/build.make CMakeFiles/example-app.dir/example-app.cpp.s
-.PHONY : example-app.cpp.s
+Tensors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tensors.dir/build.make CMakeFiles/Tensors.dir/Tensors.cpp.s
+.PHONY : Tensors.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... example-app"
-	@echo "... example-app.o"
-	@echo "... example-app.i"
-	@echo "... example-app.s"
+	@echo "... Tensors"
+	@echo "... Tensors.o"
+	@echo "... Tensors.i"
+	@echo "... Tensors.s"
 .PHONY : help
 
 

@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/ahmed4/cpp/play_libtorch/build",
-  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/ahmed4/gitS/libtorch/include -isystem /home/ahmed4/gitS/libtorch/include/torch/csrc/api/include  -D_GLIBCXX_USE_CXX11_ABI=1 -std=gnu++17 -D_GLIBCXX_USE_CXX11_ABI=1 -o CMakeFiles/example-app.dir/example-app.cpp.o -c /home/ahmed4/cpp/play_libtorch/example-app.cpp",
-  "file": "/home/ahmed4/cpp/play_libtorch/example-app.cpp",
-  "output": "CMakeFiles/example-app.dir/example-app.cpp.o"
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/ahmed4/gitS/libtorch/include -isystem /home/ahmed4/gitS/libtorch/include/torch/csrc/api/include  -D_GLIBCXX_USE_CXX11_ABI=1 -std=gnu++17 -D_GLIBCXX_USE_CXX11_ABI=1 -o CMakeFiles/Tensors.dir/Tensors.cpp.o -c /home/ahmed4/cpp/play_libtorch/Tensors.cpp",
+  "file": "/home/ahmed4/cpp/play_libtorch/Tensors.cpp",
+  "output": "CMakeFiles/Tensors.dir/Tensors.cpp.o"
 }
 ]
