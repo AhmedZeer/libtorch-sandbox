@@ -35,14 +35,22 @@ int main (int argc, char *argv[]) {
 	std::vector< torch::Tensor > target;
 
 	for( int i = 0; i < 64; i++ ){
-		data.push_back(torch::rand({3,30,30}));
+		data.push_back(torch::rand({10}));
 		target.push_back(torch::tensor( i % 10 ));
 	}
 
 	auto dataset = CustomClass(data,target).map(torch::data::transforms::Stack<>());
 	auto dataloader = torch::data::make_data_loader(dataset, 16);
 
-	std::cout << dataloader.get() << std::endl;
+	for( auto& batch : *dataloader ){
+
+		auto data = batch.data;
+		auto target = batch.target;
+
+		std::cout << "X: " << data << "\n";
+		std::cout << "y: " << target << "\n";
+
+	}
 	
 	return 0;
 }
