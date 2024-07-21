@@ -1,7 +1,9 @@
 #include <ATen/core/TensorBody.h>
 #include <ATen/ops/rand.h>
 #include <c10/util/Optional.h>
+#include <torch/data/dataloader.h>
 #include <torch/data/datasets/base.h>
+#include <torch/data/transforms/stack.h>
 #include <torch/torch.h>
 #include <torch/types.h>
 #include <vector>
@@ -32,10 +34,15 @@ int main (int argc, char *argv[]) {
 	std::vector< torch::Tensor > data;
 	std::vector< torch::Tensor > target;
 
-	for( int i = 0; i < 100; i++ ){
+	for( int i = 0; i < 64; i++ ){
 		data.push_back(torch::rand({3,30,30}));
 		target.push_back(torch::tensor( i % 10 ));
 	}
+
+	auto dataset = CustomClass(data,target).map(torch::data::transforms::Stack<>());
+	auto dataloader = torch::data::make_data_loader(dataset, 16);
+
+	std::cout << dataloader.get() << std::endl;
 	
 	return 0;
 }

@@ -8,7 +8,9 @@ init CMake :
 ```sh
 mkdir build
 cd build
-cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
+
+# Change the path
+cmake -DCMAKE_PREFIX_PATH=/home/ahmed4/gitS/libtorch ..
 cmake --build . --config Release
 ```
 
