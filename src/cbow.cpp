@@ -24,7 +24,6 @@ CBOW::CBOW(int vocab_size, int embed_size) {
 
   embedd = torch::nn::Embedding(
       torch::nn::EmbeddingOptions(vocab_size, embed_size).max_norm(1));
-  ;
   ln = torch::nn::Linear(torch::nn::LinearOptions(embed_size, vocab_size));
 
   register_module("embedd", embedd);
@@ -44,7 +43,7 @@ class my_data : public torch::data::datasets::Dataset<torch::Tensor> {};
 int main(int argc, char *argv[]) {
 
   /*auto data = my_data();*/
-  /*torch::data::make_data_loader( x,
-   * torch::data::DataLoaderOptions().batch_size(200));*/
+  /*torch::data::make_data_loader(*/
+  /*    x, torch::data::DataLoaderOptions().batch_size(200));*/
   return 0;
 }
